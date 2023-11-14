@@ -1,7 +1,7 @@
 
 # Embeddable Poll Widget
 
-is a zero dependency lightweight poll widget.
+is a zero dependency lightweight poll widget. For more complex projects, lite frameworks like preact can be used. But it will increase the bundle size to 30+ kb which is around 2kb right now.
 
 
 
@@ -10,6 +10,8 @@ is a zero dependency lightweight poll widget.
 
 ```html
 <script>
+
+refer this link for live usage : https://github.com/emreimamoglu/poll-widget/blob/main/demo2/index.html#L564-L591
 
 // Initialization script
  (function (w, d, s, o, f, js, fjs) {
@@ -117,4 +119,3 @@ To run the tests :
 ```bash
   npm run test
 ```
-

@@ -191,6 +191,10 @@ export class PollWidget {
   render(): void {
     const pollContainer = document.createElement("div");
     pollContainer.classList.add("poll-container");
+    pollContainer.attributes.setNamedItem(
+      document.createAttribute("data-poll-id")
+    );
+    pollContainer.attributes.getNamedItem("data-poll-id")!.value = this.id;
     this.element.innerHTML = "";
 
     const questionElement = document.createElement("h2");
@@ -217,6 +221,10 @@ export class PollWidget {
   private showResults(): void {
     const pollContainer = document.createElement("div");
     pollContainer.classList.add("poll-container");
+    pollContainer.attributes.setNamedItem(
+      document.createAttribute("data-poll-id")
+    );
+    pollContainer.attributes.getNamedItem("data-poll-id")!.value = this.id;
     this.element.innerHTML = "";
 
     const questionElement = document.createElement("h2");

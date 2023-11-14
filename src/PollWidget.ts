@@ -139,8 +139,39 @@ export class PollWidget {
           .poll-item{
             font-size: 1rem;
             margin-block-end: .5rem;
+            padding: .8rem;
           }
           }
+
+          @media screen and (max-width: 360px) {
+            .poll-container {
+              padding: 1rem;
+            }
+            .poll-container > h2{
+              font-size: 1.2rem;
+              margin-block-end: 1rem;
+            }
+            .poll-item{
+              font-size: .8rem;
+              margin-block-end: .4rem;
+              padding: .6rem;
+            }
+            }
+
+            @media screen and (max-width: 200px) {
+              .poll-container {
+                padding: .7rem;
+              }
+              .poll-container > h2{
+                font-size: .8rem;
+                margin-block-end: .6rem;
+              }
+              .poll-item{
+                font-size: .6rem;
+                margin-block-end: .2rem;
+                padding: .4rem;
+              }
+              }
           `;
       document.head.appendChild(style);
     }

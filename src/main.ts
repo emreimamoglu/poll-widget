@@ -1,12 +1,6 @@
 import { PollManager } from "./PollManager";
+import { Params } from "./types";
 import { isParamsValid } from "./utils";
-
-export type Params = {
-  id: string;
-  question: string;
-  options: string[];
-  element: HTMLElement;
-};
 
 const supportedAPI = ["init", "createpoll"];
 

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { isParamsValid } from '../utils';
-import { Params } from '../main';
+import { Params } from '../types';
 
 describe('isParamsValid', () => {
 

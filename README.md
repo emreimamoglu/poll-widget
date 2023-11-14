@@ -8,11 +8,10 @@ is a zero dependency lightweight poll widget. For more complex projects, lite fr
 
 ## Usage via CDN
 
-```html
-<script>
-
 refer this link for live usage : https://github.com/emreimamoglu/poll-widget/blob/main/demo2/index.html#L564-L591
 
+```html
+<script>
 // Initialization script
  (function (w, d, s, o, f, js, fjs) {
         w["PollManager"] = o;
@@ -119,3 +118,4 @@ To run the tests :
 ```bash
   npm run test
 ```
+

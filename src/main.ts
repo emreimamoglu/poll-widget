@@ -1,4 +1,12 @@
 import { PollManager } from "./PollManager";
+import { isParamsValid } from "./utils";
+
+export type Params = {
+  id: string;
+  question: string;
+  options: string[];
+  element: HTMLElement;
+};
 
 const supportedAPI = ["init", "createpoll"];
 
@@ -23,7 +31,7 @@ export function app(window: any, pollManager: PollManager) {
   globalObject.configurations = configurations;
 }
 
-function apiHandler(api: string, params: Record<string, any>, pollManager: PollManager) {
+function apiHandler(api: string, params: Params, pollManager: PollManager) {
   if (!api) throw new Error("API method required");
   api = api.toLowerCase();
 
@@ -31,16 +39,28 @@ function apiHandler(api: string, params: Record<string, any>, pollManager: PollM
     throw new Error(`Method ${api} is not supported`);
   }
 
+  if (!params) throw new Error("Params required");
+  if (!isParamsValid(params))
+    throw new Error("Params are not valid, refer to API reference");
+
   switch (api) {
     case "createpoll":
-      pollManager.createPoll(params.id, params.question, params.options, params.element);
+      pollManager.createPoll(
+        params.id,
+        params.question,
+        params.options,
+        params.element
+      );
       break;
     default:
       console.warn(`No handler defined for ${api}`);
   }
 }
 
-function extendObject(a: Record<string, any>, b: Record<string, any>): Record<string, any> {
+function extendObject(
+  a: Record<string, any>,
+  b: Record<string, any>
+): Record<string, any> {
   for (let key in b) {
     if (b.hasOwnProperty(key)) {
       a[key] = b[key];

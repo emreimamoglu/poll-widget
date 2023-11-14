@@ -9,6 +9,28 @@
     body {
       background-color: gray;
     }
+
+    .poll-container[data-poll-id="poll-2"] {
+      background-color: #1C1E1F;
+    }
+
+    .poll-container[data-poll-id="poll-2"] h2 {
+      color: #ffffff;
+    }
+
+    .poll-container[data-poll-id="poll-2"] .poll-item {
+      background-color: #2D3034;
+      color: #FFFFFF;
+    }
+
+    .poll-container[data-poll-id="poll-2"] .poll-item .poll-option,
+    .poll-container[data-poll-id="poll-2"] .poll-item .poll-percentage{
+      color: #FFFFFF;
+    }
+
+    .poll-container[data-poll-id="poll-2"] .poll-progress{
+      background-color: #0F5132;
+    } 
   </style>
   <body>
     <div id="poll-container-1"></div>
@@ -25,8 +47,9 @@
         js.id = o;
         js.src = f;
         js.async = 1;
+        js.type = "module"
         fjs.parentNode.insertBefore(js, fjs);
-      })(window, document, "script", "pw", "../dist/poll-widget.umd.cjs");
+      })(window, document, "script", "pw", "../dist/poll-widget.js");
       pw("init");
       pw("createpoll",{
         id : "poll-1",
@@ -39,7 +62,8 @@
         id : "poll-2",
         question : "What is your favorite brand?",
         options : ["CK","Prada","Tommy"],
-        element : document.getElementById("poll-container-2")
+        element : document.getElementById("poll-container-2"),
+        theme : 'dark'
       })
     </script>
   </body>

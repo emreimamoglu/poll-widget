@@ -1,7 +1,6 @@
 {
-  "name": "pollwidget",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@emreimamoglu/pollwidget",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/poll-widget.umd.cjs",
   "module": "./dist/poll-widget.js",
@@ -11,6 +10,9 @@
       "require": "./dist/poll-widget.umd.cjs"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

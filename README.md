@@ -6,6 +6,11 @@ is a zero dependency lightweight poll widget. For more complex projects, lite fr
 
 
 
+## Demo
+
+You can preview the widget by visiting following link
+
+https://poll-widget.web.app/
 ## Usage via CDN
 
 refer this link for live usage : https://github.com/emreimamoglu/poll-widget/blob/main/demo2/index.html#L564-L591
@@ -118,4 +123,3 @@ To run the tests :
 ```bash
   npm run test
 ```
-

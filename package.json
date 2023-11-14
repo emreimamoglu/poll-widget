@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/poll-widget.umd.cjs",
+  "module": "./dist/poll-widget.js",
+  "exports":{
+    "." : {
+      "import": "./dist/poll-widget.js",
+      "require": "./dist/poll-widget.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
